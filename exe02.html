@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício switch</title>
+  </head>
+  <body>
+    <div>
+        <style>
+            #diasDaSemana {width: 15vw;}
+        </style>
+      <input type="number" id="diasDaSemana" placeholder="Digite um número entre 1 a 7" />
+
+      <button onclick="verificarDiaDaSemana()">Verificar</button>
+
+      <p id="resultado"></p>
+    </div>
+
+    <script>
+      function verificarDiaDaSemana() {
+        let diaDaSemana = document.getElementById("diasDaSemana").value;
+
+        diaDaSemana = Number(diaDaSemana);
+
+        switch (diaDaSemana) {
+          case 1:
+            document.getElementById("resultado").innerText =
+              "O número 1 corresponde à Domingo";
+            break;
+
+          case 2:
+            document.getElementById("resultado").innerText =
+              "O número 2 corresponde à Segunda";
+            break;
+
+          case 3:
+            document.getElementById("resultado").innerText =
+              "O número 3 corresponde a Terça";
+            break;
+
+            case 4:
+            document.getElementById("resultado").innerText =
+              "O número 4 corresponde a Quarta";
+            break;
+
+            case 5:
+            document.getElementById("resultado").innerText =
+              "O número 5 corresponde a Quinta";
+            break;
+
+            case 6:
+            document.getElementById("resultado").innerText =
+              "O número 6 corresponde a Sexta";
+            break;
+
+            case 7:
+            document.getElementById("resultado").innerText =
+              "O número 7 corresponde a Sábado";
+            break;
+
+          default:
+            document.getElementById("resultado").innerText =
+              "Opção inválida. Escolha um número entre 1 a 7";
+        }
+        document.getElementById("diasDaSemana").value = "";
+      }
+    </script>
+  </body>
+</html>

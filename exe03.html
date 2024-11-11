@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício for</title>
+</head>
+<body>
+    <style>
+        #numeroUsuario {width: 15vw;}
+    </style>
+    <div>
+        <input type="number" id="numeroUsuario" placeholder="Digite um número positivo">
+       
+        <button onclick="somaNumeros()">Exibir sequência</button>
+       
+        <div id="resultado"></div>
+    </div>
+    
+    
+    <script>
+        function somaNumeros() {
+            let numero = document.getElementById('numeroUsuario').value;
+    
+            numero = Number(numero);
+    
+    
+            let resultadoHTML = "<h3>Sequência numérica até o número " + numero + ":</h3>";
+    
+    
+            for (let i = 1; i <= numero; i++) {
+                if (i == numero) {
+                    resultadoHTML += i + ".";
+                } else {
+                resultadoHTML += i + ", ";
+                }
+            }
+    
+    
+            document.getElementById('resultado').innerHTML = resultadoHTML;
+            document.getElementById('numeroUsuario').value = "";
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício if</title>
+</head>
+<body>
+    <div>
+        <input type="number" id="idadeUsuario" placeholder="Digite sua idade">
+       
+        <button onclick="tituloEleitor()">Exibir resultado</button>
+       
+        <div id="resultado"></div>
+    </div>
+    <script>
+
+        function tituloEleitor() {
+let idade = document.getElementById("idadeUsuario").value;
+idade = Number(idade);
+
+if (idade < 16) {
+    document.getElementById("resultado").innerHTML = ("Não pode votar.")
+}
+else if (idade == 16 || idade == 17) {
+    document.getElementById("resultado").innerHTML = ("Voto opcional.")
+}
+else if (idade >= 18 && idade <= 60) {
+    document.getElementById("resultado").innerHTML = ("Voto obrigatório.")
+}
+else {
+    document.getElementById("resultado").innerHTML = ("Voto isento.")
+}
+        }
+    </script>
+</body>
+</html>
